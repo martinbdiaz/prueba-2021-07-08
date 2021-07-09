@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
+</head>
+<body>
+1. Crea una landing para mostrar el total de resultados de los artículos y la cantidad
+de autores.
+
+
+<script>
+    search="https://newsapi.org/v2/everything?apiKey=909ec6aacb6f4ed8acb8919aa1db1de7&q=*"
+
+    var settings = {
+      "url": search,
+      "method": "GET",
+      "headers": {
+        "content-type": "application/json",
+        "accept": "application/vnd.vtex.ds.v10+json",
+        "cache-control": "no-cache"
+      }
+    }
+
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+    });
+
+    $.ajax({
+        url: 'https://newsapi.org/v2/everything?apiKey=909ec6aacb6f4ed8acb8919aa1db1de7&q=*',
+        method: 'GET',
+        success: function(respuesta) {
+            console.log(respuesta)
+        }
+    })
+
+
+</script>
+</body>
+</html>
