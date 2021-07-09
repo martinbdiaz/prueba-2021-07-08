@@ -17,23 +17,12 @@ de autores.
       "url": search,
       "method": "GET",
       "headers": {
-        "content-type": "application/json",
-        "accept": "application/vnd.vtex.ds.v10+json",
-        "cache-control": "no-cache"
+        "content-type": "application/json"
       }
     }
-
     $.ajax(settings).done(function (response) {
       console.log(response);
     });
-
-    $.ajax({
-        url: 'https://newsapi.org/v2/everything?apiKey=909ec6aacb6f4ed8acb8919aa1db1de7&q=*',
-        method: 'GET',
-        success: function(respuesta) {
-            console.log(respuesta)
-        }
-    })
 
 
 </script>
